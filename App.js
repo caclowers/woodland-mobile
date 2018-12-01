@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 
 import logo from './woodland_logos_cropped.jpg';
 
-import Hamburger from './src/components/Header/Header.js';
+import Hamburger from './src/components/Hamburger/Hamburger.js';
 
 export default class App extends React.Component {
   render() {

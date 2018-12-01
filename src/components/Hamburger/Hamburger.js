@@ -15,46 +15,46 @@ export default class Hamburger extends Component {
         }
     }
 
-    // spinCross() {
-    //     if (!this.state.active) {
-    //         Animated.spring(this.containerAnim, {
-    //             toValue: 1
-    //         }).start();
-    //         Animated.spring(this.topBar, {
-    //             toValue: .9
-    //         }).start();
-    //         Animated.spring(this.bottomBar, {
-    //             toValue: .9
-    //         }).start();
-    //         Animated.spring(this.bottomBarMargin, {
-    //             toValue: -10
-    //         }).start();
-    //         Animated.spring(this.middleBarOpacity, {
-    //             toValue: 0,
-    //             duration: 30
-    //         }).start();
-    //     } else {
-    //         this.setState({
-    //             active: false
-    //         });
-    //         Animated.spring(this.containerAnim, {
-    //             toValue: 0
-    //         }).start();
-    //         Animated.spring(this.topBar, {
-    //             toValue: 0
-    //         }).start();
-    //         Animated.spring(this.bottomBar, {
-    //             toValue: 0
-    //         }).start();
-    //         Animated.spring(this.bottomBarMargin, {
-    //             toValue: 4
-    //         }).start();
-    //         Animated.timing(this.middleBarOpacity, {
-    //             toValue: 1,
-    //             duration: 600
-    //         }).start();
-    //     }
-    // }
+    spinCross() {
+        if (!this.state.active) {
+            Animated.spring(this.containerAnim, {
+                toValue: 1
+            }).start();
+            Animated.spring(this.topBar, {
+                toValue: .9
+            }).start();
+            Animated.spring(this.bottomBar, {
+                toValue: .9
+            }).start();
+            Animated.spring(this.bottomBarMargin, {
+                toValue: -10
+            }).start();
+            Animated.spring(this.middleBarOpacity, {
+                toValue: 0,
+                duration: 30
+            }).start();
+        } else {
+            this.setState({
+                active: false
+            });
+            Animated.spring(this.containerAnim, {
+                toValue: 0
+            }).start();
+            Animated.spring(this.topBar, {
+                toValue: 0
+            }).start();
+            Animated.spring(this.bottomBar, {
+                toValue: 0
+            }).start();
+            Animated.spring(this.bottomBarMargin, {
+                toValue: 4
+            }).start();
+            Animated.timing(this.middleBarOpacity, {
+                toValue: 1,
+                duration: 600
+            }).start();
+        }
+    }
 
     cross() {
         if (!this.state.active) {
@@ -92,98 +92,98 @@ export default class Hamburger extends Component {
     }
 
 
-    // spinArrow() {
-    //     if (!this.state.active) {
-    //         Animated.spring(this.containerAnim, {
-    //             toValue: 1
-    //         }).start();
-    //         Animated.spring(this.topBar, {
-    //             toValue: 1
-    //         }).start();
-    //         Animated.spring(this.bottomBar, {
-    //             toValue: 1
-    //         }).start();
-    //         Animated.spring(this.width, {
-    //             toValue: 14
-    //         }).start();
-    //         Animated.spring(this.marginLeft, {
-    //             toValue: -13
-    //         }).start();
-    //         Animated.spring(this.bottomBarMargin, {
-    //             toValue: 2
-    //         }).start();
-    //         Animated.spring(this.topBarMargin, {
-    //             toValue: -2
-    //         }).start();
-    //     } else {
-    //         Animated.spring(this.containerAnim, {
-    //             toValue: 0
-    //         }).start();
-    //         Animated.spring(this.topBar, {
-    //             toValue: 0
-    //         }).start();
-    //         Animated.spring(this.bottomBar, {
-    //             toValue: 0
-    //         }).start();
-    //         Animated.spring(this.width, {
-    //             toValue: 25
-    //         }).start();
-    //         Animated.spring(this.marginLeft, {
-    //             toValue: 0
-    //         }).start();
-    //         Animated.spring(this.bottomBarMargin, {
-    //             toValue: 4
-    //         }).start();
-    //         Animated.spring(this.topBarMargin, {
-    //             toValue: 0
-    //         }).start();
-    //     }
-    // }
+    spinArrow() {
+        if (!this.state.active) {
+            Animated.spring(this.containerAnim, {
+                toValue: 1
+            }).start();
+            Animated.spring(this.topBar, {
+                toValue: 1
+            }).start();
+            Animated.spring(this.bottomBar, {
+                toValue: 1
+            }).start();
+            Animated.spring(this.width, {
+                toValue: 14
+            }).start();
+            Animated.spring(this.marginLeft, {
+                toValue: -13
+            }).start();
+            Animated.spring(this.bottomBarMargin, {
+                toValue: 2
+            }).start();
+            Animated.spring(this.topBarMargin, {
+                toValue: -2
+            }).start();
+        } else {
+            Animated.spring(this.containerAnim, {
+                toValue: 0
+            }).start();
+            Animated.spring(this.topBar, {
+                toValue: 0
+            }).start();
+            Animated.spring(this.bottomBar, {
+                toValue: 0
+            }).start();
+            Animated.spring(this.width, {
+                toValue: 25
+            }).start();
+            Animated.spring(this.marginLeft, {
+                toValue: 0
+            }).start();
+            Animated.spring(this.bottomBarMargin, {
+                toValue: 4
+            }).start();
+            Animated.spring(this.topBarMargin, {
+                toValue: 0
+            }).start();
+        }
+    }
 
-    // arrow() {
-    //     if (!this.state.active) {
-    //         Animated.spring(this.topBar, {
-    //             toValue: 1
-    //         }).start();
-    //         Animated.spring(this.bottomBar, {
-    //             toValue: 1
-    //         }).start();
-    //         Animated.spring(this.width, {
-    //             toValue: 14
-    //         }).start();
-    //         Animated.spring(this.marginLeft, {
-    //             toValue: -13
-    //         }).start();
-    //         Animated.spring(this.bottomBarMargin, {
-    //             toValue: 2
-    //         }).start();
-    //         Animated.spring(this.topBarMargin, {
-    //             toValue: -2
-    //         }).start();
-    //     } else {
-    //         this.setState({
-    //             active: false
-    //         });
-    //         Animated.spring(this.topBar, {
-    //             toValue: 0
-    //         }).start();
-    //         Animated.spring(this.bottomBar, {
-    //             toValue: 0
-    //         }).start();
-    //         Animated.spring(this.width, {
-    //             toValue: 25
-    //         }).start();
-    //         Animated.spring(this.marginLeft, {
-    //             toValue: 0
-    //         }).start();
-    //         Animated.spring(this.bottomBarMargin, {
-    //             toValue: 4
-    //         }).start();
-    //         Animated.spring(this.topBarMargin, {
-    //             toValue: 0
-    //         }).start();
-    //     }
-    // }
+    arrow() {
+        if (!this.state.active) {
+            Animated.spring(this.topBar, {
+                toValue: 1
+            }).start();
+            Animated.spring(this.bottomBar, {
+                toValue: 1
+            }).start();
+            Animated.spring(this.width, {
+                toValue: 14
+            }).start();
+            Animated.spring(this.marginLeft, {
+                toValue: -13
+            }).start();
+            Animated.spring(this.bottomBarMargin, {
+                toValue: 2
+            }).start();
+            Animated.spring(this.topBarMargin, {
+                toValue: -2
+            }).start();
+        } else {
+            this.setState({
+                active: false
+            });
+            Animated.spring(this.topBar, {
+                toValue: 0
+            }).start();
+            Animated.spring(this.bottomBar, {
+                toValue: 0
+            }).start();
+            Animated.spring(this.width, {
+                toValue: 25
+            }).start();
+            Animated.spring(this.marginLeft, {
+                toValue: 0
+            }).start();
+            Animated.spring(this.bottomBarMargin, {
+                toValue: 4
+            }).start();
+            Animated.spring(this.topBarMargin, {
+                toValue: 0
+            }).start();
+        }
+    }
 
 
     _animate() {
