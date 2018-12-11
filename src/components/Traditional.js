@@ -5,21 +5,19 @@ import logo from '../../woodland_logos_cropped.jpg';
 
 
 
-class Pizza extends React.Component {
+class Traditional extends React.Component {
 
   static navigationOptions = {
-    title: 'PIZZA'
+    title: 'Traditional Pizzas'
   }
 
-  onButtonPressTraditional = () => {
-    this.props.navigation.navigate('traditional');
-  }
+
 
   onButtonPressGourmet = () => {
-    this.props.navigation.navigate('gourmet');
+    this.props.navigation.navigate('sandwiches');
   }
   onButtonPressCYO = () => {
-    this.props.navigation.navigate('createYourOwn');
+    this.props.navigation.navigate('reviews');
   }
  
   onButtonPressHome = () => {
@@ -39,27 +37,10 @@ class Pizza extends React.Component {
             alt="logo"
             style={{ width: 193, height: 161 }} />
         </View >
-        <ImageBackground 
-        style={{flex: 1, width: '100%', height: '100%', alignItems: 'center',
-        justifyContent: 'center',}}
-        source={require('../../pizzas.png')}>
-          <Button
-            title="TRADITIONAL"
-            onPress={this.onButtonPressTraditional}
-          />
-          <Button
-            title="GOURMET"
-            onPress={this.onButtonPressGourmet}
-          />
-          <Button
-            title="CREATE YOUR OWN"
-            onPress={this.onButtonPressCYO}
-          />
           <Button
             title="HOME"
             onPress={this.onButtonPressHome}
           />
-        </ImageBackground>
       </View>
     );
   }
@@ -74,4 +55,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Pizza;
+export default Traditional;

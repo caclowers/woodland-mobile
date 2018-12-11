@@ -25,15 +25,15 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: 'white',
     borderWidth: 1,
-    borderColor: 'blue',
+    borderColor: 'cornflowerblue',
     marginTop: 25,
-    width: 200,
+    width: 300,
     padding: 20,
     borderRadius: 8
   },
   text: {
     textAlign: 'center',
-    color: 'blue',
+    color: 'cornflowerblue',
     fontWeight: 'normal',
     fontSize: 20
   }
