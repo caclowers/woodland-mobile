@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, ImageBackground } from 'react-native';
 import logo from './woodland_logos_cropped.jpg';
 import Button from './src/components/Button';
 import Specials from './src/components/Specials';
@@ -45,13 +45,13 @@ class App extends React.Component {
 
 
     return (
-      <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.contentContainer}>
         <View className="App-header" style={styles.header}>
           <Image
             source={logo}
             className="App-logo"
             alt="logo"
-            style={{ width: 193, height: 161 }} />
+            style={{ flex:0, justifyContent: 'flex-start', alignItems: 'center', width: 193, height: 161 }} />
         </View >
         <Text style={styles.call}>Call Ahead -</Text>
         <Text style={styles.ready}>we'll have it ready when you arrive</Text>
@@ -81,13 +81,13 @@ class App extends React.Component {
             onPress={this.onButtonPressAbout}
           />
         </ImageBackground>
-      </View>
+      </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  contentContainer: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
