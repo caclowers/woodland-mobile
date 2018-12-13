@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
 import logo from './woodland_logos_cropped.jpg';
 import Button from './src/components/Button';
+import Specials from './src/components/Specials';
 import Pizza from './src/components/Pizza';
 import Traditional from './src/components/Traditional';
 import Gourmet from './src/components/Gourmet';
@@ -20,6 +21,10 @@ class App extends React.Component {
     title: 'Home'
   }
 
+  onButtonPressSpecials = () => {
+    this.props.navigation.navigate('specials');
+  }
+  
   onButtonPressPizza = () => {
     this.props.navigation.navigate('pizza');
   }
@@ -55,6 +60,10 @@ class App extends React.Component {
         style={{flex: 2, width: '100%', height: '100%', alignItems: 'center',
         justifyContent: 'center',}}
         source={require('./pizzas.png')}>
+          <Button
+            title="WEEKLY SPECIALS"
+            onPress={this.onButtonPressSpecials}
+          />
           <Button
             title="PIZZA"
             onPress={this.onButtonPressPizza}
@@ -102,6 +111,7 @@ const styles = StyleSheet.create({
 //navigation stuff
 const Navigation = createStackNavigator({
   home: App,
+  specials: Specials,
   pizza: Pizza,
   traditional: Traditional,
   gourmet: Gourmet,
