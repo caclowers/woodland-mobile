@@ -5,6 +5,12 @@
     "slug": "WoodlandPizza",
     "privacy": "public",
     "sdkVersion": "31.0.0",
+    "ios": {
+      "bundleIdentifier": "io.github.woodlandpizza"
+    },
+    "android": {
+      "package": "io.github.woodlandpizza"
+    },
     "platforms": [
       "ios",
       "android"
@@ -22,12 +28,6 @@
     },
     "assetBundlePatterns": [
       "**/*"
-    ],
-    "ios": {
-      "bundleIdentifier": "com.caclowers.woodlandpizza"
-    },
-    "android": {
-      "package": "com.caclowers.woodlandpizza"
-    }
+    ]
   }
 }
