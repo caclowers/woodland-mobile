@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "woodland",
-    "description": "This project is really great.",
-    "slug": "AwesomeProject",
+    "description": "An app for Woodland Pizza.",
+    "slug": "WoodlandPizza",
     "privacy": "public",
     "sdkVersion": "31.0.0",
     "platforms": [
@@ -24,7 +24,10 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.caclowers.woodlandpizza"
+    },
+    "android": {
+      "package": "com.caclowers.woodlandpizza"
     }
   }
 }
