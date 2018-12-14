@@ -2,7 +2,7 @@
   "expo": {
     "name": "woodland",
     "description": "An app for Woodland Pizza.",
-    "slug": "WoodlandPizza",
+    "slug": "AwesomeProject",
     "privacy": "public",
     "sdkVersion": "31.0.0",
     "ios": {
