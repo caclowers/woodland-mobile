@@ -11,7 +11,10 @@ import About from './src/components/About';
 import Sandwiches from './src/components/Sandwiches';
 import Reviews from './src/components/Reviews';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-
+import { web, phonecall } from 'react-native-communications';
+ 
+const phoneNumber = '9524479663';
+const prompt = true;
 
 
 
@@ -39,10 +42,12 @@ class App extends React.Component {
     this.props.navigation.navigate('about');
   }
 
- 
+  onButtonPressCall = () => {
+    phonecall(phoneNumber, prompt)
+  }
 
+  
   render() {
-
 
     return (
       <ScrollView contentContainerStyle={styles.contentContainer}>
@@ -55,7 +60,15 @@ class App extends React.Component {
         </View >
         <Text style={styles.call}>Call Ahead -</Text>
         <Text style={styles.ready}>we'll have it ready when you arrive</Text>
-        <Text style={styles.phone}>(952)447-9663</Text>
+        <Text
+          style={styles.phone}
+          onPress={this.onButtonPressCall}>
+          (952)447-9663
+        </Text> 
+          
+          
+          
+        
         <ImageBackground 
         style={{flex: 2, width: '100%', height: '100%', alignItems: 'center',
         justifyContent: 'center',}}
@@ -80,6 +93,7 @@ class App extends React.Component {
             title="ABOUT"
             onPress={this.onButtonPressAbout}
           />
+          <View style={{height: 64}}></View>
         </ImageBackground>
       </ScrollView>
     );
@@ -88,7 +102,7 @@ class App extends React.Component {
 
 const styles = StyleSheet.create({
   contentContainer: {
-    flex: 1,
+    flex: 0,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
@@ -104,7 +118,9 @@ const styles = StyleSheet.create({
   phone: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: 'cornflowerblue'
+    color: 'cornflowerblue',
+    padding: 6,
+    textDecorationLine: 'underline'
   }
 });
 

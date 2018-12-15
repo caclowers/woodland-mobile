@@ -2,9 +2,12 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Image, ImageBackground } from 'react-native';
 import Button from './Button';
 import logo from '../../woodland_logos_cropped.jpg';
+import { web, phonecall } from 'react-native-communications';
 
 
-
+const addressDoorDash = "https://www.doordash.com/store/woodland-take-n-bake-pizza-savage-165711/";
+const addressBiteSquad = "https://www.bitesquad.com/food/woodland-take-n-bake-pizza/16827";
+const addressSlice = "https://slicelife.com/restaurants/MN/Savage/55378/woodland-take-n-bake-pizza-co/menu"
 class About extends React.Component {
  
   static navigationOptions = {
@@ -13,6 +16,18 @@ class About extends React.Component {
 
   onButtonPressHome = () => {
     this.props.navigation.navigate('home');
+  }
+
+  onButtonPressSlice = () => {
+    web(addressSlice);
+  }
+
+  onButtonPressBiteSquad = () => {
+    web(addressBiteSquad);
+  }
+  
+  onButtonPressDoorDash = () => {
+    web(addressDoorDash);
   }
 
   render() {
@@ -87,23 +102,29 @@ class About extends React.Component {
             5745 Egan Drive (County Road 42), Savage, Minnesota 55378 
           </Text>
 
-          <Text style={styles.name}>
+          <Text style={styles.header}>
             Online ordering:
           </Text> 
-          <Text>
+          <Text
+            style={styles.web}
+            onPress={this.onButtonPressSlice}>
             Slice — https://slicelife.com 
           </Text> 
 
-          <Text style={styles.name}>
+          <Text style={styles.header}>
             Ordering Delivery:
           </Text>
           <Text>
             For delivery service:   
           </Text>
-          <Text>
+          <Text
+            style={styles.web}
+            onPress={this.onButtonPressBiteSquad}>
             Bite Squad — www.bitesquad.com 
           </Text>
-          <Text>
+          <Text
+            style={styles.web}
+            onPress={this.onButtonPressDoorDash}>
             Door Dash — www.doordash.com
           </Text>
         </View>  
@@ -145,6 +166,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'red',
     marginTop: 14
+  },
+  web:{
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'cornflowerblue',
+    margin: 24,
+    textDecorationLine: 'underline'
   }
 });
 
