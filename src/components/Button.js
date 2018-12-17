@@ -1,11 +1,14 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, TouchableNativeFeedback, Platform } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, TouchableHighlight, TouchableNativeFeedback, Platform } from 'react-native';
 
 const Button = (props) => {
  const { onPress, title} = props;
 if (Platform.OS === 'ios'){
    return (
-   <TouchableOpacity onPress={onPress}>
+   <TouchableOpacity 
+   onPress={onPress}
+   activeOpacity={0.75}
+   >
    <View style={styles.button}>
      <Text style={styles.text}>{title}</Text>
    </View>

@@ -2,7 +2,7 @@
   "expo": {
     "name": "woodland",
     "description": "An app for Woodland Pizza in Savage, MN",
-    "slug": "AwesomeProject",
+    "slug": "WoodlandPizza",
     "privacy": "public",
     "sdkVersion": "31.0.0",
     "platforms": [

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, ImageBackground } from 'react-native';
 import Button from './Button';
 import logo from '../../woodland_logos_cropped.jpg';
 
@@ -31,7 +31,7 @@ class Pizza extends React.Component {
 
 
     return (
-      <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.contentContainer}>
         <View className="App-header" style={styles.header}>
           <Image
             source={logo}
@@ -60,13 +60,13 @@ class Pizza extends React.Component {
             onPress={this.onButtonPressHome}
           />
         </ImageBackground>
-      </View>
+      </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  contentContainer: {
     flex: 1,
     backgroundColor: '#fff',
     justifyContent: 'flex-start',
