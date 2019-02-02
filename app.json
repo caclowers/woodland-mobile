@@ -2,14 +2,14 @@
   "expo": {
     "name": "woodland",
     "description": "An app for Woodland Pizza in Savage, MN",
-    "slug": "Woodland Pizza",
+    "slug": "woodland-pizza",
     "privacy": "public",
     "sdkVersion": "31.0.0",
     "platforms": [
       "ios",
       "android"
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -26,13 +26,17 @@
       "ios": {
         "bundleIdentifier": "io.github.woodlandpizza",
         "buildNumber": "0.0.1",
-        "icon": "./woodland_logos_ios_icon.jpg",
+        "icon": "./icon.png",
     
-        "supportsTablet": "false",
-        "usesIcloudStorage": "false",
-          "usesNonExemptEncryption": "false"
+        "supportsTablet": false,
+        "usesIcloudStorage": false
 
-        }
+        },
+      "android": {
+        "package": "host.exp.woodland_pizza",
+        "versionCode": 3,
+        "permissions": []
+      }
       }
     
   }

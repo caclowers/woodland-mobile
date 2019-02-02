@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Image, ImageBackground } from 'react-native';
-import logo from './woodland_logos_cropped.jpg';
+import logo from './icon.png';
 import Button from './src/components/Button';
 import Specials from './src/components/Specials';
 import Pizza from './src/components/Pizza';
@@ -64,15 +64,12 @@ class App extends React.Component {
           style={styles.phone}
           onPress={this.onButtonPressCall}>
           (952)447-9663
-        </Text> 
-          
-          
-          
-        
+        </Text>
         <ImageBackground 
-        style={{flex: 2, width: '100%', height: '100%', alignItems: 'center',
-        justifyContent: 'center',}}
-        source={require('./pizzas.png')}>
+          style={{flex: 2, width: '100%', height: '100%', alignItems: 'center',
+          justifyContent: 'center',}}
+          source={require('./pizzas.png')}
+        >
           <Button
             title="WEEKLY SPECIALS"
             onPress={this.onButtonPressSpecials}
