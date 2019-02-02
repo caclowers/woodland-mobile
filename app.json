@@ -9,9 +9,9 @@
       "ios",
       "android"
     ],
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon2.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -25,7 +25,7 @@
     ],
       "ios": {
         "bundleIdentifier": "io.github.woodlandpizza",
-        "buildNumber": "0.0.1",
+        "buildNumber": "0.0.2",
         "icon": "./icon.png",
     
         "supportsTablet": false,
@@ -34,9 +34,9 @@
         },
       "android": {
         "package": "host.exp.woodland_pizza",
-        "versionCode": 3,
+        "versionCode": 4,
         "permissions": []
       }
-      }
+    }
     
   }
