@@ -3,8 +3,6 @@ import { StyleSheet, Text, View, ScrollView, Image, ImageBackground } from 'reac
 import Button from './Button';
 import logo from '../../woodland_logos_cropped.jpg';
 
-
-
 class Pizza extends React.Component {
 
   static navigationOptions = {
@@ -21,14 +19,13 @@ class Pizza extends React.Component {
   onButtonPressCYO = () => {
     this.props.navigation.navigate('createYourOwn');
   }
- 
+
   onButtonPressHome = () => {
     this.props.navigation.navigate('home');
   }
 
 
   render() {
-
 
     return (
       <ScrollView contentContainerStyle={styles.contentContainer}>
@@ -39,27 +36,23 @@ class Pizza extends React.Component {
             alt="logo"
             style={{ width: 193, height: 161 }} />
         </View >
-        <ImageBackground 
-        style={{flex: 1, width: '100%', height: '100%', alignItems: 'center',
-        justifyContent: 'center',}}
-        source={require('../../pizzas.png')}>
-          <Button
-            title="TRADITIONAL"
-            onPress={this.onButtonPressTraditional}
-          />
-          <Button
-            title="GOURMET"
-            onPress={this.onButtonPressGourmet}
-          />
-          <Button
-            title="CREATE YOUR OWN"
-            onPress={this.onButtonPressCYO}
-          />
-          <Button
-            title="HOME"
-            onPress={this.onButtonPressHome}
-          />
-        </ImageBackground>
+        <Button
+          title="TRADITIONAL"
+          onPress={this.onButtonPressTraditional}
+        />
+        <Button
+          title="GOURMET"
+          onPress={this.onButtonPressGourmet}
+        />
+        <Button
+          title="CREATE YOUR OWN"
+          onPress={this.onButtonPressCYO}
+        />
+        <Button
+          title="HOME"
+          onPress={this.onButtonPressHome}
+        />
+        <View style={{ height: 64 }}></View>
       </ScrollView>
     );
   }
@@ -67,9 +60,9 @@ class Pizza extends React.Component {
 
 const styles = StyleSheet.create({
   contentContainer: {
-    flex: 1,
+    flex: 0,
     backgroundColor: '#fff',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center'
   }
 });

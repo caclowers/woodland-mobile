@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Image, ImageBackground } from 'react-native';
-import logo from './icon.png';
+import logo from './assets/icon.png';
 import Button from './src/components/Button';
 import Specials from './src/components/Specials';
 import Pizza from './src/components/Pizza';
@@ -15,8 +15,6 @@ import { web, phonecall } from 'react-native-communications';
  
 const phoneNumber = '9524479663';
 const prompt = true;
-
-
 
 class App extends React.Component {
 
@@ -46,7 +44,6 @@ class App extends React.Component {
     phonecall(phoneNumber, prompt)
   }
 
-  
   render() {
 
     return (
